@@ -231,26 +231,11 @@ README.md
 report.md
 ```
 
-### 2. CI 이미지 적용
+### 2. 공인 CI 이미지 적용
 
 공식 홈페이지에서 캡처한 서울교통공사 CI 이미지를 `ci.png`라는 파일명으로 저장하여 `index.html`과 같은 위치에 업로드한다. `index.html`에서는 다음 코드로 이미지를 불러온다.
-
-```html
-<img class="brand-ci" src="./ci.png" alt="서울교통공사 Seoul Metro" width="174" height="44" />
-```
-
 이미지 원본 크기와 관계없이 헤더 영역에 맞게 표시되도록 CSS에서 다음과 같이 크기를 조정한다.
 
-```css
-.brand-ci {
-  display: block;
-  width: 174px;
-  height: 44px;
-  object-fit: contain;
-  object-position: left center;
-  flex: none;
-}
-```
 
 ### 3. 화면 구성 요구사항
 
@@ -287,7 +272,7 @@ report.md
 
 ## 사용한 도구
 
-### 1. 생성형 AI
+### 1. 생성형 AI(ChatGPT, Lovable)
 
 - 과제 가이드라인 해석
 - Design Thinking 구조화
@@ -301,7 +286,6 @@ report.md
 - HTML
 - CSS
 - JavaScript
-- GitHub
 - GitHub Pages
 
 ### 3. 참고 자료
