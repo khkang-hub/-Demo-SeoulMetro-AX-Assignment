@@ -83,30 +83,16 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:12px;
       text-decoration:none;
       min-width:230px;
     }
-    .brand-symbol{
-      width:44px;height:44px;
+    .brand-ci{
       display:block;
+      width:174px;
+      height:44px;
+      object-fit:contain;
+      object-position:left center;
       flex:none;
-    }
-    .brand-text strong{
-      display:block;
-      font-size:19px;
-      font-weight:800;
-      letter-spacing:-.045em;
-      color:var(--sm-blue-deep);
-      line-height:1.1;
-    }
-    .brand-text span{
-      display:block;
-      color:var(--muted);
-      font-size:10.5px;
-      font-weight:700;
-      letter-spacing:.22em;
-      margin-top:3px;
     }
     nav{
       display:flex;
@@ -538,6 +524,10 @@
       .nav{flex-wrap:wrap}
       .menu-btn{display:inline-flex}
       .brand{min-width:auto}
+      .brand-ci{
+        width:152px;
+        height:40px;
+      }
     }
     @media(max-width:560px){
       .top-notice .container{display:block;padding:8px 18px}
@@ -567,19 +557,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="서울교통공사 홈">
-        <svg class="brand-symbol" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="서울교통공사 CI">
-          <title>Seoul Metro CI</title>
-          <!-- Seoul Metro symbol: upper red arc + lower blue arc forming a stylized S / continuous flow -->
-          <path d="M11 22 C 16 8, 34 6, 47 14 C 52 17, 54 21, 53 25 L 43 25 C 42 22, 39 20, 34 20 C 26 20, 21 24, 20 30 L 10 30 C 10 27, 10 25, 11 22 Z"
-                fill="#E4002B"/>
-          <path d="M53 42 C 48 56, 30 58, 17 50 C 12 47, 10 43, 11 39 L 21 39 C 22 42, 25 44, 30 44 C 38 44, 43 40, 44 34 L 54 34 C 54 37, 54 39, 53 42 Z"
-                fill="#0052A4"/>
-        </svg>
-        <span class="brand-text">
-          <strong>서울교통공사</strong>
-          <span>SEOUL METRO</span>
-
-        </span>
+        <img class="brand-ci" src="./ci.png" alt="서울교통공사 Seoul Metro" width="174" height="44" />
       </a>
       <button class="menu-btn" id="menuBtn" aria-controls="gnb" aria-expanded="false">메뉴</button>
       <nav id="gnb" aria-label="주요 서비스">
