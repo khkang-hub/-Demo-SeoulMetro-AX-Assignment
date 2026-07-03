@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>서울교통공사 AX 홈페이지 리뉴얼 프로토타입</title>
+  <meta name="description" content="서울교통공사 공식 홈페이지 시민 중심 AX 리뉴얼 과제 프로토타입" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="홈으로 이동">
+        <span class="brand-mark" aria-hidden="true">🚇</span>
+        <span>
+          <strong>Seoul Metro AX</strong>
+          <small>시민 중심 홈페이지 리뉴얼</small>
+        </span>
+      </a>
+      <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="siteNav">메뉴</button>
+      <nav id="siteNav" class="site-nav" aria-label="주요 메뉴">
+        <a href="#quick">빠른 해결</a>
+        <a href="#assistant">AI 도우미</a>
+        <a href="#links">공식 링크</a>
+        <a href="#prd">PRD</a>
+        <a href="#submit">제출 안내</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Case Study Prototype</p>
+          <h1>시민이 원하는 정보를<br />10초 안에 찾는 홈페이지</h1>
+          <p class="hero-copy">
+            지연증명, 실시간 열차 정보, 유실물, 편의시설, 냉난방 민원처럼
+            시민이 자주 찾는 업무를 상황 중심으로 재배치한 AX 리뉴얼 시안입니다.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#quick">지금 필요한 기능 찾기</a>
+            <a class="secondary-button" href="#prd">기획 의도 보기</a>
+          </div>
+        </div>
+        <aside class="status-panel" aria-label="프로토타입 요약">
+          <h2>프로토타입 목표</h2>
+          <ul>
+            <li>공공기관 신뢰감 유지</li>
+            <li>모바일 우선 정보 구조</li>
+            <li>AI 기반 메뉴 탐색 보조</li>
+            <li>공식 링크 중심 연결</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="quick" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Quick Solve</p>
+          <h2>지금 바로 해결해야 하는 일</h2>
+          <p>기관 소개보다 시민의 현재 상황을 먼저 보여주는 구조입니다.</p>
+        </div>
+
+        <label class="search-label" for="cardSearch">필요한 업무 검색</label>
+        <input id="cardSearch" class="search-input" type="search" placeholder="예: 지연, 유실물, 운임, 채용, 실시간" />
+
+        <div id="quickCards" class="card-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="assistant" class="section alt">
+      <div class="container assistant-grid">
+        <div>
+          <p class="eyebrow">AX Concept</p>
+          <h2>AI 시민 이동 도우미</h2>
+          <p>
+            사용자의 자연어 질문을 이해해 공식 메뉴로 연결하는 안내형 AI입니다.
+            실제 민원 접수나 개인정보 처리는 하지 않고, 검증된 공식 경로로 안내합니다.
+          </p>
+          <div class="prompt-buttons" aria-label="질문 예시">
+            <button data-prompt="지하철이 지연돼서 회사에 제출할 증명서가 필요해">지연증명</button>
+            <button data-prompt="열차에 물건을 두고 내렸어">유실물</button>
+            <button data-prompt="열차 안이 너무 더워서 민원을 넣고 싶어">냉난방</button>
+            <button data-prompt="엘리베이터 있는 역을 확인하고 싶어">편의시설</button>
+          </div>
+        </div>
+        <div class="chat-box" role="region" aria-label="AI 도우미 응답 예시">
+          <div class="chat-message user">무엇을 도와드릴까요?</div>
+          <div id="aiResponse" class="chat-message bot">
+            예시 버튼을 누르면 시민 상황에 맞는 안내 문구가 표시됩니다.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Official Links</p>
+          <h2>서울교통공사 주요 공식 링크</h2>
+          <p>과제 제출 전 실제 브라우저에서 최종 클릭 검증을 권장합니다.</p>
+        </div>
+        <div id="officialLinks" class="link-list"></div>
+      </div>
+    </section>
+
+    <section id="prd" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">PRD Summary</p>
+          <h2>제품 요구사항 요약</h2>
+          <p>개발자가 이해할 수 있도록 기능 요건과 비기능 요건을 나누어 정리했습니다.</p>
+        </div>
+
+        <div class="prd-grid">
+          <article>
+            <h3>핵심 기능</h3>
+            <ul>
+              <li>빠른 해결 카드</li>
+              <li>검색어 기반 카드 필터링</li>
+              <li>AI 안내 시뮬레이션</li>
+              <li>공식 링크 연결</li>
+              <li>모바일 반응형 UI</li>
+            </ul>
+          </article>
+          <article>
+            <h3>비기능 요건</h3>
+            <ul>
+              <li>키보드 접근 가능</li>
+              <li>명확한 포커스 표시</li>
+              <li>개인정보 미수집</li>
+              <li>정적 파일 기반 빠른 배포</li>
+              <li>GitHub Pages 호환</li>
+            </ul>
+          </article>
+          <article>
+            <h3>성공 기준</h3>
+            <ul>
+              <li>주요 기능 10초 내 접근</li>
+              <li>모바일 화면 깨짐 없음</li>
+              <li>공식 링크 오연결 없음</li>
+              <li>리포트와 프로토타입 구조 일치</li>
+              <li>URL 제출 가능</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="submit" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Submission</p>
+          <h2>제출 전 체크리스트</h2>
+        </div>
+        <ol class="checklist">
+          <li>GitHub 저장소에 `index.html`, `styles.css`, `app.js`, `README.md` 업로드</li>
+          <li>GitHub Pages 배포 활성화</li>
+          <li>공개 URL 접속 확인</li>
+          <li>리포트에 URL, 기획 의도, PRD, AI 활용 고지 포함</li>
+          <li>서울교통공사 공식 링크 최종 클릭 검증</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>과제 제출용 프로토타입입니다. 실제 서울교통공사 공식 서비스가 아닙니다.</p>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
