@@ -1,4 +1,4 @@
-# 서울교통공사 시민 중심 AX 홈페이지 리뉴얼 <span style="font-size:0.55em; font-weight:500; color:#666;">작성자: 강경호</span>
+# 서울교통공사 시민 중심 AX 홈페이지 리뉴얼 <sub>(작성자: 강경호)</sub>
 
 ## 프로젝트명
 
