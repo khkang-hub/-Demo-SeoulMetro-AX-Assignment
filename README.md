@@ -230,11 +230,6 @@ ci.png
 README.md
 ```
 
-app.js
-ci.png
-index.html
-styles.css
-
 ### 2. 공인 CI 이미지 적용
 
 공식 홈페이지에서 캡처한 서울교통공사 CI 이미지를 `ci.png`라는 파일명으로 저장하여 `index.html`과 같은 위치에 업로드한다. `index.html`에서는 다음 코드로 이미지를 불러온다.
